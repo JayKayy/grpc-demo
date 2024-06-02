@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option go_package = "github.com/grpc-demo/app";
+
+service Messenger {
+    rpc SendMessage(Msg) returns (Msg) {}
+}
+
+message Msg {
+    string content = 1;
+}
